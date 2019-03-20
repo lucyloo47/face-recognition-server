@@ -25,7 +25,7 @@ const handleRegister = (db, bcrypt) => (req, res) => {
             .then(trx.commit)
             .catch(trx.rollback)
         })
-    .catch(err => res.status(400).json('Email used is already linked to a profile'))
+    .catch(err => res.status(400).json('unable to register'))
 }
 
 module.exports = {
